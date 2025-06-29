@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum | OE‑Sportwagenvermietung</title>
+  <meta name="description" content="Impressum – OE‑Sportwagenvermietung">
+  <link rel="icon" href="img/oe_sportwagenvermietung.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root {
+      --bg: #111;
+      --text: #eee;
+      --accent: #e30613;
+      --accent-dark: #a8000e;
+    }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding-top: 80px;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; width: 104%;
+      background: var(--bg);
+      border-bottom: 1px solid #222;
+      z-index: 1000;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      padding: 0 2rem;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-menu li a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      color: var(--accent);
+    }
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .mobile-menu-btn .bar {
+      width: 25px;
+      height: 3px;
+      background: var(--text);
+    }
+    main.legal-content.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+    .legal-section {
+      margin-bottom: 2rem;
+    }
+    .legal-section h2 {
+      color: var(--accent);
+      font-size: 1.4rem;
+      margin-top: 1rem;
+    }
+    .legal-section h3 {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+    .legal-section p {
+      line-height: 1.6;
+      margin-top: .5rem;
+    }
+    a.contact-link {
+      color: var(--text);
+      text-decoration: none;
+    }
+    a.contact-link:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      background: var(--bg);
+      border-top: 1px solid #222;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .footer-links a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .container { max-width: 1100px; margin: auto; padding: 20px; }
+
+
+@media screen and (max-width: 480px) {
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+
+  .logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-right: auto;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .mobile-menu-btn .bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0;
+    border-top: 1px solid #222;
+  }
+
+  .nav-menu.open {
+    max-height: 300px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #222;
+  }
+
+  .nav-menu a:hover {
+    background: #1a1a1a;
+    color: var(--accent);
+  }
+  h1 {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .legal-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .legal-section h3 {
+    font-size: 1rem;
+  }
+  main.legal-content.container {
+    padding: 1rem;
+  }
+
+  .nav-menu a.active {
+    color: var(--text); /* nicht rot in Mobile */
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar container">
+      <div class="logo">OE‑Sportwagenvermietung</div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="flotte.html">Fahrzeug</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="legal-content container">
+    <h1>Impressum</h1>
+    <section class="legal-section">
+      <h2>Angaben gemäß § 5 TMG</h2>
+      <p>OE‑Sportwagenvermietung<br>Rottenburg am Neckar</p>
+
+      <h2>Kontakt</h2>
+      <p><a href="tel:+4915209986852" class="contact-link">Telefon: +49 1520 9986852</a></p>
+      <p><a href="mailto:info@oe-vermietung.de" class="contact-link">E-Mail: info@oe-vermietung.de</a></p>
+
+      <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+      <p>B.Örcün, Rottenburg am Neckar</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 OE‑Sportwagenvermietung</p>
+      <ul class="footer-links">
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="agb.html">AGB</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.querySelector('.nav-menu');
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

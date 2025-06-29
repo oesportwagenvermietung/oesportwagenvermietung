@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGB | OE‑Sportwagenvermietung</title>
+  <meta name="description" content="Allgemeine Geschäftsbedingungen – OE‑Sportwagenvermietung">
+  <link rel="icon" href="img/oe_sportwagenvermietung.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --bg: #111;
+      --text: #eee;
+      --accent: #e30613;
+      --accent-dark: #a8000e;
+    }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding-top: 80px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: var(--bg);
+      border-bottom: 1px solid #222;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li {
+      list-style-type: none;
+    }
+
+    .nav-menu li a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      color: var(--accent);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .mobile-menu-btn .bar {
+      width: 25px;
+      height: 3px;
+      background: var(--text);
+    }
+
+    main.legal-content {
+      padding: 2rem 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .legal-section {
+      margin-bottom: 2rem;
+    }
+
+    .legal-section h2 {
+      color: var(--accent);
+      font-size: 1.4rem;
+      margin-top: 1rem;
+    }
+
+    .legal-section h3 {
+      margin-top: 1rem;
+      color: var(--text);
+      font-size: 1.1rem;
+    }
+
+    .legal-section p, .legal-section ul {
+      line-height: 1.6;
+      margin-top: .5rem;
+    }
+
+    .legal-section ul {
+      padding-left: 1.5rem;
+    }
+
+    a.contact-link {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a.contact-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 2rem 0;
+      background: var(--bg);
+      border-top: 1px solid #222;
+      text-align: center;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .footer-links a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+@media screen and (max-width: 480px) {
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-right: auto;
+    text-align: left;
+    text-decoration: none;
+  }
+
+
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .mobile-menu-btn .bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0;
+    border-top: 1px solid #222;
+  }
+
+  .nav-menu.open {
+    max-height: 300px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #222;
+  }
+
+
+  .nav-menu a:hover {
+    background: #1a1a1a;
+    color: var(--accent);
+  }
+
+  main.legal-content.container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .legal-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .legal-section h3 {
+    font-size: 1rem;
+  }
+
+  .nav-menu a.active {
+    color: var(--text); /* nicht rot in Mobile */
+  }
+}
+
+  </style>
+</head>
+  <header>
+    <nav class="navbar container">
+      <div class="logo">OE‑Sportwagenvermietung</div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="flotte.html">Fahrzeug</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+<body>
+
+  <!-- ... innerhalb deines <main> Bereichs -->
+  <main class="legal-content container">
+    <h1>AGB</h1>
+
+    <section class="legal-section">
+      <h2>1. Fahrzeugführer</h2>
+      <p>1.1. Nur die namentlich im dazu vorgesehenen Feld auf dem Mietvertrag genannte Person ist berechtigt, das im Mietvertrag genannte Fahrzeug zu fahren.</p>
+      <p>1.2. Sollen weitere Personen zur Fahrzeugführung berechtigt sein, müssen diese dem Vermieter genannt und deren Berechtigung von dem Vermieter schriftlich bestätigt werden (max. 2).</p>
+      <p>1.3. Voraussetzung zum Fahren des gemieteten Fahrzeugs ist, dass jeder Fahrzeuglenker mindestens 21 alt ist und seit mindestens 2-3 Jahren im Besitz einer gültigen Fahrerlaubnis ist (in Abhängigkeit vom gemieteten Fahrzeug - wird auf jedem Mietvertrag einzeln festsowie die weiteren im Mietvertrag genannten Fahrzeuglenker haben dem Vermieter ihren Führerschein vor Vertragsabschluss vorzuzeigen. </p>
+      <P>1.4. Der Vermieter behält sich vor, die Erlaubnis zur Benutzung des gemieteten Fahrzeugs von weiteren Voraussetzungen abhängig zu machen, die dem Vermieter vor Vertragsabschluss bekannt gemacht werden. </P>
+      <P>1.5. Sollte das Fahrzeug unerlaubt an eine dritte Person zum Fahren überlassen werden wird eine Vertragsstrafe in Höhe von 1.500,- € fällig. </P>
+    </section>
+
+    <section class="legal-section">
+      <h2>2.Übergabe des Fahrzeugs</h2>
+      <p>2.1. Der Mieter ist verpflichtet, den Zustand des Fahrzeugs bei der Übergabe sorgfältig zu überprüfen. Jede sichtbare Beschädigung ist von den Parteien sofort schriftlich auf dem Mietvertrag oder einem dem Mietvertrag beizufügenden Beiblatt zu vermerken. </p>
+      <P>2.2. Für sichtbare Schäden, die nicht bei der Übergabe festgehalten sind, wird vermutet, dass diese während der Dauer der Vermietung entstanden sind und somit vom Mieter zu verantworten sind. </P>
+    </section>
+
+    <section class="legal-section">
+      <h2>3. Benutzung des Fahrzeugs</h2>
+      <p>3.1. Der Mieter verpflichtet sich, das Fahrzeug sorgfältig und gewissenhaft zu behandeln.</p>
+      <P>3.2. Der Mieter verpflichtet sich, die üblichen regelmäßigen Kontrollen vorzunehmen oder vornehmen zu lassen. Insbesondere verpflichtet sich der Mieter den Wasser-, Öl- und Bremsflüssigkeitsstand sowie den Luftdruck der Reifen regelmäßig zu
+  Überprüfen. </P>
+      <P>3.3. Sogenannte Race- / F1- / Launchcontrol-Starts sind untersagt. Zuwiderhandlung wird mit einer Strafe von 300€ pro ausgeführtem Race- / F1- / Launchcontrol-Start geahndet. Die Fahrzeugsoftware speichert diese Daten und wird dementsprechend regelmäßig ausgelesen. </P>
+    </section>
+
+    <section class="legal-section">
+      <h2>4. Mietdauer</h2>
+      <p>4.1. Die minimale Mietdauer beträgt 1 Stunde. Soweit der vertraglich vereinbarte Rückgabetermin nicht eingehalten wird und das Fahrzeug mehr als 1 Stunde zu spät zurückgegeben wird, verlängert sich der Mietvertrag für jede weiteren angefangenen 24 Stunden um je einen Tag. Der Mieter hat den ursprünglich für dieses Fahrzeug auf einen Tag entfallenden vereinbarten Mietpreis zu entrichten.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>5. Untersagung der Benutzung</h2>
+      <p>5.1. Dem Mieter ist es untersagt, das gemietete Fahrzeug zu benutzen: - Um verbotene oder gefährliche Waren zu transportieren; - Um Personen gegen Entgelt zu befördern; - Wenn mehr Personen befördert werden als in der
+  Zulassung maximal vorgesehen; - Wenn die Zuladung das zulässige Gesamtgewicht übersteigt; - Um Fahrstunden, auch kostenlos, zu erteilen; - Um andere Fahrzeuge zu ziehen oder zu stoßen; - Wenn ein Defekt des Kilometerzählers vorliegt; - Wenn eine Panne oder ein mechanischer oder technischer Defekt vorliegt; - Wenn dem Mieter oder einem genannten Fahrzeuglenker der
+  Führerschein entzogen, eingezogen oder aus sonstigen
+  Gründen dauerhaft oder vorübergehend ungültig wird; - Auf anderen als geteerten oder gepflasterten öffentlichen Straßen
+  innerhalb der BRD und den im Mietvertrag ausdrücklich
+  genannten Ländern; - Sollte der Mieter das Fahrzeug auch in anderen Ländern
+  benutzen wollen, so hat er das schriftliche Einverständnis
+  vom Vermieter einzuholen. Aufgrund wechselnder regionaler
+  Risiken behält sich der Vermieter das Recht vor, einer
+  Benutzung in den weiteren vom Mieter gewünschten Ländern
+  nicht zuzustimmen oder zu widerrufen. </p>
+      <P>5.2. Es ist dem Mieter verboten, das gemietet Fahrzeug für irgendwelche
+  sportliche Veranstaltungen zu benutzen, insbesondere Rennen,
+  Rallyes oder jede andere Art des sportlichen Wettbewerbs,
+  Fahrertrainings oder Off-Road-Fahrten. </P>
+      <P>5.3. Eine Benutzung des Fahrzeugs ist untersagt, wenn dem Fahrzeuglenker
+  ein sicheres Fahren nicht möglich ist, insbesondere weil er unter dem
+  Einfluss von Medikamenten, Alkohol oder Drogen steht. </P>
+      <P>5.4. Es ist dem Mieter verboten, das Fahrzeug umzubauen, seine
+  technischen Einrichtungen zu verändern, Zubehörteile
+  zuzufügen oder zu entfernen oder Aufschriften/Aufkleber
+  anzubringen oder zu entfernen. </P>
+      <P>5.5. Es ist dem Mieter insbesondere untersagt, das Fahrzeug zu
+  verleihen oder gewerblich oder privat an Dritte
+  weiterzuvermieten. </P>
+    </section>
+    <P>5.6. Dem Mieter ist es untersagt jegliche elektronische Hilfsprogramme
+  (z.B. ESP, ABS, etc.) zu deaktivieren und das Fahrzeug ohne diese zu
+  bewegen.</P>
+
+    <section class="legal-section">
+      <h2>6. Pflichten bei Panne/Defekt</h2>
+      <p>6.1. Der Mieter hat jede Panne, sowie jeden technischen Defekt
+  dem Vermieter unverzüglich — nach
+  Möglichkeit schriftlich — unter Angabe seines aktuellen
+  Aufenthaltsortes anzuzeigen. Der Vermieter wird diese Mitteilung dem
+  Mieter schriftlich bestätigen. Ohne eine schriftliche Anzeige kommt der
+  Vermieter mit der Beseitigung eines Mangels in Verzug.
+  </P><P>6.2. Eine Reparatur ist bei der nächsten Vertragswerkstatt der
+  Fahrzeugmarke des gemieteten Fahrzeugs vorzunehmen. Vor einem
+  Reparaturauftrag ist das schriftliche Einverständnis des Vermieters
+  einzuholen.
+  </P><P>6.3. Ist die Panne oder der technische Defekt nicht auf einen unerlaubten
+  oder unsorgfältigen Umgang mit dem gemieteten Fahrzeug
+  zurückzuführen, erstattet der Vermieter den vom Mieter bei der
+  Vertragswerkstatt nachweislich verauslagten Betrag gegen Vorlage der
+  Rechnung. Der Vermieter kann von dem Mieter zusätzlich die Übergabe
+  der ausgetauschten Teile verlangen.
+  </P><P>6.4. Sind die Panne oder der technische Defekt auf einen unerlaubten oder
+  unsorgfältigen Umgang des Mieters zurückzuführen, haftet der Mieter für
+  alle hieraus entstehenden Schäden und Kosten in voller Höhe.
+  </P><P>6.5. Sollte aufgrund der Reparatur das gemietete Fahrzeug erst nach Ablauf
+  der im Mietvertrag vorgesehenen Mietdauer an den Vermieter
+  zurückgegeben werden, so hat der Mieter für den gesamten Zeitraum bis
+  zur tatsächlichen Rückgabe des Fahrzeugs den vereinbarten anteiligen
+  täglichen, sich aus dem Miettarif ergebenden, Mietpreis zu entrichten.
+  Dies gilt nicht, sollte die Panne oder der technische Defekt nicht auf einen
+  unerlaubten oder unsorgfältigen Umgang mit dem Fahrzeug durch den
+  Mieter zurückzuführen sein.
+  </P><P>6.6. Ansprüche des Mieters auf Minderung, Schadens- und
+  Aufwendungsersatz wegen einer Panne oder eines technischen Defekts
+  oder eines sonstigen Mangels des gemieteten Fahrzeugs sind
+  ausgeschlossen. Insbesondere ist der Vermieter nicht verpflichtet, dem
+  Mieter ein Ersatzfahrzeug für den Zeitraum zur Verfügung zu stellen, in
+  dem das gemietete Fahrzeug aufgrund der Panne oder des technischen
+  Defekts nicht genutzt werden kann.
+  </P><P>6.7. Der Mieter hat den Vermieter sofort zu unterrichten, sollte er oder
+  einer der im Mietvertrag weiter genannten Fahrzeuglenker seinen
+  Führerschein verlieren oder sollte dieser eingezogen oder dauerhaft
+  oder vorübergehend ungültig sein.
+  </P><P>6.8. Der Mieter verpflichtet sich, das gemietete Fahrzeug nicht zu verlassen,
+  ohne sich vergewissert zu haben, dass die Türen, Fenster und das
+  Verdeck geschlossen, das Lenkradschloss eingerastet, der Schlüssel
+  abgezogen und das Fahrzeug abgeschlossen ist. Der Mieter entbindet
+  den Vermieter jeglicher Haftung für Schäden
+  an Gegenständen, die im Fahrzeug befördert werden. </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>7. Versicherungen</h2>
+      <p>7.1. Der Mieter, sowie die übrigen zur Fahrzeugführung berechtigten
+  Fahrzeuglenker, sind durch eine vom Vermieter abgeschlossene
+  Haftpflicht- und Vollkaskoversicherung versichert. Diese Versicherung
+  sieht einen Selbstbehalt in der Höhe des im Mietvertrag angegebenen
+  Betrages
+  vor, der vom Mieter zu übernehmen ist. Diese Versicherung deckt
+  gesetzliche Schadensansprüche Dritter.
+  </P><P>7.2. Verweigert die Haftpflichtversicherung ihre Leistungen ganz oder
+  zum Teil in Anwendung des Versicherungsvertrages, so bleibt der
+  Mieter in vollem Umfang schadenersatzpflichtig und muss den
+  Vermieter von Schadenersatzansprüchen Dritter freistellen und
+  bereits eingetretene
+  Schäden ersetzen. Dies gilt insbesondere für den Fall, dass die
+  Leistungsverweigerung der Haftpflichtversicherung auf das
+  Verhalten des Mieters oder der berechtigten anderen
+  Fahrzeuglenker zurückzuführen ist.
+  </P><P>.3. Von der Kaskoversicherung sind folgende Schäden nicht umfasst:
+  Schäden, die nach Ziff. 5 dieser Bestimmung untersagten Benutzung des
+  Fahrzeugs eingetreten sind. -Mietausfallschaden infolge der Reparaturzeiten. -Schäden an Reifen, Felgen, CD-Spieler, Navigationssystem, Antenne, Sitze, A
+  Außenspiegel, Handschuhfach, und dessen Inhalt, Schäden an der Mechanik, die auf
+  eine falsche Handhabung oder die Verwendung von nichts für das Fahrzeug zugelassene
+  Teile oder eines ungeeigneten Treibstoffes zurückzuführen sind. -Höhere Gewalt, Aufruhr, Demonstrationen, Vandalismus, Krieg oder
+  bürgerkriegsähnliche Zustände.
+  </P><P>7.4. Darüber hinaus sind für Cabriolets von der Kasko-Versicherung folgende Schäden
+  ausgeschlossen und gehen zu Lasten des Mieters; -Schäden am Dach, die durch Unachtsamkeit oder falsche Handhabung verursacht sind.
+  Zu Schäden am Dach zählen auch Schäden am Verdeck, des Verschlussmechanismus
+  und der Scheibe.  -Schäden durch das Sitzen von einer oder mehrerer Personen auf dem Verdeck,  -Schäden im Innern des Fahrzeugs, wenn dieser trotz Regen, Hagel Windstößen oder
+  sonstigen Ereignissen nicht ordnungsgemäß geschlossen wurde.
+  </P><P>7.5. Sollte die Kaskoversicherung ihre Leistungen jedoch ganz oder zum Teil
+  verweigern und das Verhalten des Mieters hierfür mitursächlich sein, so
+  hat der Mieter dem Vermieter den gesamten nicht von der
+  Kaskoversicherung ersetzten Schaden zu ersetzen.
+  </P><P>7.6. Unabhängig von der Wahl des Kaskosystems hat der Mieter bei einem
+  Fahrzeugschaden dem Vermieter die Ausfalltage des Fahrzeuges für
+  jeden Tag des Ausfalles zu erstatten. Der Mieter hat Ausfall dem
+  Vermieter auch dann zu erstatten, wenn der Fahrzeugschaden nicht
+  durch das Verschulden des Mieters oder durch höhere Gewalt (Aufruhr,
+  Bürgerkrieg, Erdbeben, Hochwasser) verursacht wurde und der
+  Verantwortliche nicht festgestellt ist. </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>8. Unfälle & Schäden</h2>
+      <p>8.1. Bei Unfällen oder jeglichen anderen Schadensfällen, insbesondere
+  durch Diebstahl, versuchten Diebstahl, Vandalismus, höhere Gewalt,
+  etc. ist der Mieter verpflichtet unverzüglich alle geeigneten Maßnahmen
+  zu ergreifen, um die Interessen des Vermieters zu wahren. Der Mieter ist
+  insbesondere dazu gehalten: -Den Vermieter unverzüglich zu benachrichtigen und die Nachricht
+  schriftlich zu bestätigen; -Ein Unfallprotokoll zu erstellen; -Die Polizei zu verständigen und einen Polizeibericht erstellen zu lassen.
+  </P><P>8.2. Bei Unfällen garantiert der Mieter die Rückführungskosten des Fahrzeugs
+  zu dem im Mietvertrag vorgesehenen Rückgabeort zu übernehmen.
+  </P><P>8.3. Der Vermieter schließt jede Haftung für Verspätungen, Verluste oder
+  Schadensfälle, die in Folge eines Unfalls mit dem Fahrzeug entstehen,
+  aus.
+  </P><P>8.4. Der Mieter garantiert den gesamten, durch Verlust oder
+  Beschädigung des Fahrzeugs, entstandenen Schaden zu
+  ersetzen.
+  </P><P>8.5. Die Ersatzpflicht des Mieters besteht unabhängig von dem
+  Verursacher des Schadens. </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>9. Zahlungspflicht</h2>
+      <p>9.1. Der Mieter sichert ausdrücklich zu, mit Abschluss des Mietvertrags den
+  sich aus dem Miettarif und der Mietdauer ergebenden Mietpreis, sowie
+  alle mit dem Vertrag oder dem geltenden Miettarif verbundenen
+  Gebühren, Schadenersatz- und Kostenerstattungsansprüche sowie
+  Spesen zu bezahlen.
+  </P><P>9.2. Für die Berechnung der Kilometergebühren ist einzig der originale
+  Kilometerzähler im gemieteten Fahrzeug maßgeblich.
+  </P><P>9.3. Erleidet das gemietete Fahrzeug eine Panne, einen Defekt, einen Unfall
+  oder entsteht sonst irgendein Schaden an dem gemieteten Fahrzeug oder
+  wird dieses entwendet, so bleibt der Mieter verpflichtet, den Mietpreis bis
+  zu dem ursprünglich für die Rückgabe des Fahrzeugs vereinbarten
+  Datums zu bezahlen. Hiervon unberührt ist die Verpflichtung des Mieters,
+  weitere Schäden und Kosten dem Vermieter zu erstatten.
+  </P><P>9.4. Hat der Mieter eine Panne, einen Defekt, einen Unfall oder sonst
+  irgendeinen Schaden an dem gemieteten Fahrzeug mit verursacht oder
+  war er daran beteiligt und dauert die Reparatur für das gemietete
+  Fahrzeug länger als die ursprünglich vertraglich vereinbarte Mietdauer, so
+  ist der Mieter verpflichtet, für jeden Tag der Verspäteten Rückgabe die für
+  dieses Zeitraum entstehende und sich aus dem Miettarif ergebende
+  zusätzliche Miete ebenfalls zu entrichten.  </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>10. Reservierung & Storno</h2>
+      <p>10.1. Will der Mieter ein Fahrzeug für einen bestimmten Zeitraum im Voraus
+  reservieren, so hat er dies dem Vermieter schriftlich mitzuteilen. Der
+  Mieter hat dabei eine Kopie seines:
+  Personalausweises, seines Führerscheins, seiner Kreditkartendaten und
+  eine unterschriebe Ausfertigung dieser Allgemeinen Vermietbedingungen
+  der OE-Sportwagenvermietung zu Übermitteln.
+  </P><P>10.2.
+  Besitzt der Mieter keine Kreditkarte, ist eine Anzahlung in Höhe
+  von 20% des gesamten Mietpreises vorab zu überweisen, um die
+  Reservierung verbindlich zu machen.
+  </P><P>10.3.
+  Die Reservierung ist verbindlich für den Mieter, wenn der
+  Vermieter diese Unterlagen erhalten und die Reservierung schriftlich
+  bestätigt hat.
+  </P><P>10.4.
+  Der Mieter erklärt hiermit sein Einverständnis, dass der Vermieter
+  aufgrund der Reservierung berechtigt ist, von der Kreditkartengesellschaft
+  des Mieters eine Garantieleistung zu fordern, die dem sich aus dem
+  Miettarif ergebenden Mietzins einschließlich der Selbstbeteiligung und
+  den voraussichtlichen Überführungsgebühren (falls anfallend) für den
+  reservierten Mietzeitraum entspricht, mindestens aber in Höhe der
+  Stornogebühr.
+  </P><P>10.5.
+  Will der Mieter die Reservierung stornieren, so hat er dem
+  Vermieter eine Stornogebühr zu bezahlen. Diese ist in ihrer Höhe
+  abhängig von dem gemieteten Fahrzeug und dem Zeitpunkt der
+  Stornoerklärung. Sollte die Stornierung erst innerhalb von 72 bis 24
+  Stunden vor dem vorgesehenen Mietbeginn erfolgen, so hat der Mieter
+  eine Stornogebühr in Höhe von 50% des sich aus dem ursprünglich
+  vereinbarten Mietzeitraum ergebenden Mietzins zu bezahlen.
+  </P><P>10.6.
+  Sollte die Stornierung erst innerhalb 24 Stunden vor dem
+  vorgesehenen Mietbeginn erfolgen, so hat der Mieter die gesamte
+  Miete für den ursprünglich vereinbarten Mietzeitraum zu bezahlen. </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>11. Garantie des Mieters   </h2>
+      <p>11.1. Der Mieter garantiert und sichert hiermit persönlich dem
+  Vermieter die Zahlung des vereinbarten Mietpreises, sowie jeder
+  anderen Forderung vom Vermieter aus diesem Vertrag zu. Der
+  Mieter garantiert dem Vermieter weiterhin, jeden von ihm während
+  seiner Mietdauer eingetretenen Fahrzeugschaden oder
+  Fahrzeugverlust vollständig bis zur Höhe des im Mietvertrag
+  vereinbarten Zeitwertes zu ersetzen. Leistungen einer Versicherung
+  werden auf diesen Fahrzeugschaden angerechnet.
+  </P><P>11.2. Zur Sicherheit aller Forderungen vom Vermieter aus diesem Vertrag,
+  insbesondere der Ansprüche auf die Kosten der Versicherung
+  einschließlich des Selbstbehaltes sowie alle Schadenersatz- und
+  Kostenerstattungsansprüche, übergibt der Mieter die Mietkaution in
+  bar, per EC-Cash oder per Reservierung des Mietkautionsbetrags
+  über eine Kreditkarte
+  </P><P>11.3. Sollte der Mieter das gemietete Fahrzeug weder in Deutschland
+  noch den ausdrücklich im Mietvertrag genannten weiteren Ländern
+  benutzten und in einem solchen Land einen Schaden an dem
+  gemieteten Fahrzeug entstehen oder das Fahrzeug entwendet
+  werden, so haftet der Mieter für diese Schaden in voller Höhe. Für
+  den Fall, dass das Fahrzeug entwendet wird, hat der Mieter Zeitwert
+  zu ersetzen.  </p>
+    </section>
+
+      <section class="legal-section">
+      <h2>12. Rückgabe des Fahrzeugs </h2>
+      <p>12.1. Der Mieter verpflichtet sich, Das gemietete Fahrzeug im perfekten
+  Zustand samt allen vom Vermieter bergebenen Zubehörteilen und
+  Dokumenten an dem im Mietvertrag vereinbarten Ort zum
+  vereinbarten Datum und der vereinbarten Uhrzeit an dem
+  Vermieter oder einem vom Vermieter schriftlich genannten
+  Bevollmächtigten zurückzugeben. Maßgeblich für den genauen
+  Zeitpunkt der Rückgabe ist die Uhrzeit, zu der der Mieter das
+  Fahrzeug im Empfang genommen hat.
+  Ein zusätzlicher Mittag wird berechnet, sobald das Fahrzeug mehr
+  als 1 Stunde später zurückgegeben wird.
+  </P><P>12.2. Wünscht der Mieter schriftlich, das Fahrzeug an einem anderen Ort
+  zurückzugeben, als der an dem er es abgeholt hat, so ist er hierzu
+  nur berechtigt, wenn der Vermieter schriftlich sein Einverständnis
+  hierzu erteilt und einen Bevollmächtigten benennt, dem alle
+  ausgehändigten Fahrzeugschlüssel zu übergeben sind.
+  </P><P>12.3. Jeglicher Antrag auf Verlängerung des vorliegenden Vertrags muss
+  mindestens 24 Stunden vor Ablauf des vereinbarten Vertragsendes
+  schriftlich beim Vermieter eingereicht werden.
+  </P><P>12.4. Der Vermieter ist berechtigt, jederzeit die Rückgabe des Fahrzeugs
+  zu verlangen, sowie den Vertrag zu kündigen, wenn der Mieter
+  seine Verpflichtungen aus diesem Vertrag verletzt.
+  </P><P>12.5. Überlässt der Mieter das Fahrzeug an einem nicht zuvor vom
+  Vermieter schriftlich akzeptierten Ort, ist der Mieter zur Zahlung
+  einer Entschädigung verpflichtet. Diese beträgt 3,50€ für jeden
+  Kilometer zwischen dem Ort, an dem das Fahrzeug abgestellt
+  wurde und dem Ort, an dem die Rückgabe vertraglich vorgesehen
+  ist.
+  </P><P>12.6. Sollte das gemietete Fahrzeug nicht bis 1 Stunde nach dem
+  vertraglich vereinbarten Zeitpunkt zurückgegeben werden, so
+  verlängert sich hierdurch die Mietdauer jeweils um jeden
+  angefangenen Kalendertag.
+  </P><P>12.7. Ein Zurückbehaltungsrecht des Mieters an gemietetes Fahrzeug ist
+  ausgeschlossen
+  </P><P>12.8. Bei der Rückgabe untersucht der Vermieter das Fahrzeug auf sofort
+  sichtbare Beschädigungen. Diese werden auf dem
+  Rückgabeprotokoll oder einem Beiblatt festgehalten.
+  </P><P>12.9. Der Mieter ist verpflichtet das Fahrzeug vollgetankt, oder mit der im
+  Vertrag festgelegtem Tankinhalt zurückzugeben. Sollte dies nicht
+  der Falls sein, wird eine Pauschale von 35€ zuzüglich zu den
+  Tankkosten berechnet. </p>
+
+          <section class="legal-section">
+      <h2>13. Verkehrsordnungswidrigkeiten </h2>
+      <p>13.1. Der Mieter ist verpflichtet, die Straßenverkehrsordnung und die
+  gesetzlichen Bestimmungen der Länder einzuhalten, in denen er das
+  gemietete Fahrzeug führt.
+  </P><P>13.2. Der Mieter haftet für Bußen und Strafmandate, die während der
+  Mietzeit entstanden sind, zusätzlich wird eine Bearbeitungsgebühr in
+  Höhe von 25€ berechnet.  </p>
+    </section>
+
+          <section class="legal-section">
+      <h2>14. Vertragsänderungen </h2>
+      <p>14.1. Vereinbarungen außerhalb des vorliegenden Vertrags bedürfen der
+  Schriftform. Dies gilt für Regelungen, die das Schriftformerfordernis
+  betreffen.
+  </P><P>14.2. Mündliche Nebenabsprachen bestehen nicht.
+  </P><P>14.3. Der Mieter hat neben seinem Wohnort auf dem Mietvertrag eine
+  Anschrift und eine Emailadresse anzugeben, unter denen ihm während
+  der Vertragsdauer alle Erklärungen seitens dem Vermieter zugehen.</p>
+    </section>
+
+          <section class="legal-section">
+      <h2>15. Aufrechnung</h2>
+      <p>Der Mieter ist berechtigt, mit unbestrittenen oder rechtskräftig
+  festgestellten Forderungen gegen über dem Vermieter
+  aufzurechnen. </p>
+    </section>
+
+          <section class="legal-section">
+      <h2>16. Nichtausübung eines Rechts </h2>
+      <p>Die Nichtausübung eines der durch die vorliegenden Allgemeinen Vermietbedingungen verliehenen Rechts durch eine der Parteien bedeutet nicht den Verzicht auf die aus diesem Recht erwachsenden Ansprüche. </p>
+    </section>
+
+          <section class="legal-section">
+      <h2>17. Anwendbares Recht im Gerichtsstand</h2>
+      <p>7.1. Der vorliegende Vertrag unterliegt dem Recht der Bundesrepublik Deutschland
+  </P><P>17.2. Die Vertragssprache ist deutsch.
+  </P><P>17.3. Für Streitigkeiten, die sich aus den Allgemeinen Vermietbedingungen und dem Mietvertrag ergeben, ist ausschließlich das Amtsgericht Rottenburg zuständig.
+  </P><P>17.4. Erfüllungsort für alle Leistungen von Mieter und Vermieter ist Rottenburg am Neckar. </p>
+    </section>
+
+
+      <section class="legal-section">
+      <h2>18. Salvatorische Klausel </h2>
+      <p>18.1. Sollten eine oder mehrere Bestimmungen dieses Vertrages unwirksam oder nichtig sein, so wird die Geltung der übrigen Bestimmungen dadurch nicht berührt.
+  </P><P>18.2. Die betreffende unwirksame oder nichtige Bestimmung ist vom Ersteller durch eine wirksame zu ersetzen, welche im Sinn und Zweck der unwirksamen oder nichtigen Bestimmung entspricht oder so nahe wie möglich kommt </p>
+    </section>
+
+    <section class="legal-section">
+      <h3>PDF-Download</h3>
+      <p><a class="contact-link" href="pdf/Allgemeine Vermietbedingungen der OE-Sportwagenvermietung.pdf" download>📄 AGB als PDF herunterladen</a></p>
+    </section>
+  </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 OE‑Sportwagenvermietung</p>
+        <ul class="footer-links">
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="agb.html">AGB</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+  <script>
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

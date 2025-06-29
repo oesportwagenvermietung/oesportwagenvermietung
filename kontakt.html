@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt | OE‑Sportwagenvermietung</title>
+  <meta name="description" content="Kontakt zur OE‑Sportwagenvermietung – Premium Sportwagen mieten">
+  <link rel="icon" href="img/oe _ sportwagenvermietung.png">
+
+  <style>
+    :root {
+      --bg: #111;
+      --text: #eee;
+      --accent: #e30613;
+      --accent-dark: #a8000e;
+      --form-bg: #1b1b1b;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding-top: 80px;
+    }
+    .container { max-width: 1100px; margin: auto; padding: 20px; }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    /* Header */
+      header { position: fixed; top:0; left:0; width:100%; background: var(--bg); border-bottom:1px solid #222; z-index: 1000; }
+
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .mobile-menu-btn .bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+  }
+
+  .nav-menu {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0;
+    border-top: 1px solid #222;
+  }
+
+  .nav-menu.open {
+    max-height: 300px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #222;
+  }
+
+  .nav-menu a:hover {
+    background: #1a1a1a;
+    color: var(--accent);
+  }
+
+  .logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-right: auto;
+    text-align: left;
+    text-decoration: none;
+  }
+  .nav-menu a.active {
+    color: var(--text); /* nicht rot in Mobile */
+  }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      padding: 0 2rem;
+    }
+
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-menu a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--accent);
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .mobile-menu-btn .bar {
+      width: 24px;
+      height: 3px;
+      background: var(--text);
+    }
+
+    /* Kontakt Section */
+    .contact-section h1 {
+      font-size:2.5rem; text-align:center; margin-bottom:2rem; color: var(--accent);
+    }
+    .contact-grid {
+      display:grid; grid-template-columns:1fr 1fr; gap:3rem;
+    }
+    .contact-form-container,
+    .contact-info-container {
+      background: var(--form-bg);
+      padding:2rem; border-radius:12px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.5);
+    }
+    .contact-form-container h2,
+    .contact-info-container h2 {
+      margin-bottom:1rem; color: var(--accent); font-size:1.8rem;
+    }
+    form .form-group { margin-bottom:1.2rem; text-align:left; }
+    form label { display:block; margin-bottom:.5rem; font-weight:500; }
+    form input[type=text], form input[type=email], form input[type=tel], form select, form textarea {
+      width:100%; padding:.8rem; border:1px solid #333; border-radius:6px;
+      background:#222; color:var(--text); font-size:1rem;
+    }
+    form textarea { resize: vertical; }
+    form input[type=checkbox] {
+      margin-right:.5rem; transform: scale(1.1); vertical-align: middle;
+    }
+    form button[type=submit] {
+      background: var(--accent); color:#fff; border:none; padding:1rem 2rem;
+      font-size:1.1rem; font-weight:600; border-radius:50px;
+      cursor:pointer; transition: background .3s ease;
+    }
+    form button[type=submit]:hover { background: var(--accent-dark); }
+
+    .contact-info-container h3 {
+      margin-top:1rem; font-size:1.2rem; color:var(--text);
+    }
+    .contact-info-container p, .contact-info-container a {
+      margin:.3rem 0; line-height:1.4; color:var(--text);
+      text-decoration:none;
+    }
+    .contact-info-container a:hover { color: var(--accent); }
+
+    footer {
+      padding: 2rem 0;
+      background: var(--bg);
+      border-top: 1px solid #222;
+      text-align: center;
+    }
+
+    .footer-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .footer-links a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Responsive */
+@media(max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .mobile-menu-btn .bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0;
+    border-top: 1px solid #222;
+  }
+
+  .nav-menu.open {
+    max-height: 300px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #222;
+  }
+  .nav-menu a:hover {
+    background: #1a1a1a;
+    color: var(--accent);
+  }
+
+  .logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-right: auto;
+  text-align: left;
+  text-decoration: none;
+  }
+
+  .nav-menu a.active {
+    color: var(--text); /* nicht rot in Mobile */
+  }
+}
+
+</style>
+
+</head>
+  <header>
+    <nav class="navbar container">
+      <div class="logo">OE‑Sportwagenvermietung</div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="flotte.html">Fahrzeug</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+<body>
+
+  <!-- Kontakt -->
+  <section class="contact-section container">
+    <h1>Kontakt</h1>
+    <div class="contact-grid">
+
+      <!-- Formular -->
+      <div class="contact-form-container">
+        <h2>Schreiben Sie uns</h2>
+        <!-- Formular wurde angepasst -->
+        <form action="https://formsubmit.co/3724efc21d9396273a840e0cb0b617c0" method="POST">
+          <!-- Empfänger -->
+          <input type="hidden" name="_cc" value="oesportwagenvermietung@gmail.com">
+          <input type="hidden" name="_subject" value="Neue Anfrage von der Website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
+          <!-- Honeypot gegen Bots -->
+          <input type="text" name="_honeypot" style="display:none">
+
+          <div class="form-group">
+            <label for="first-name">Vorname *</label>
+            <input type="text" id="first-name" name="Vorname" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Nachname *</label>
+            <input type="text" id="last-name" name="Nachname" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E‑Mail *</label>
+            <input type="email" id="email" name="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="Telefon" placeholder="+49 1520 9986852">
+          </div>
+          <div class="form-group">
+            <label for="subject">Betreff *</label>
+            <select id="subject" name="Betreff" required>
+              <option value="">Bitte wählen</option>
+              <option>Buchungsanfrage</option>
+              <option>Allgemeine Anfrage</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Nachricht *</label>
+            <textarea id="message" name="Nachricht" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="privacy" name="Datenschutz" required>
+            <label for="privacy">* Ich akzeptiere die Datenschutzerklärung und AGB</label>
+          </div>
+          <button type="submit">Nachricht senden</button>
+        </form>
+      </div>
+
+      <!-- Kontaktinfos -->
+      <div class="contact-info-container">
+        <h2>Kontaktinformationen</h2>
+        <div class="contact-info">
+          <h3>Standort</h3>
+          <p>Rottenburg am Neckar</p>
+
+          <h3>Kontaktdaten</h3>
+          <p>Email: <a href="mailto:oesportwagenvermietung@gmail.com">oesportwagenvermietung@gmail.com</a></p>
+          <p>Instagram: <a href="https://instagram.com/OE__Sportwagenvermietung" target="_blank">@OE__Sportwagenvermietung</a></p>
+          <p>WhatsApp: <a href="https://wa.me/4915209986852" target="_blank">+49 1520 9986852</a></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 OE‑Sportwagenvermietung</p>
+      <ul class="footer-links">
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="agb.html">AGB</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.querySelector('.nav-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('open'));
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unsere Flotte | OE‑Sportwagenvermietung</title>
+  <meta name="description" content="Mercedes‑AMG CLA 45 S mieten – OE‑Sportwagenvermietung Schwarz‑Weiß Design">
+  <link rel="icon" href="img/oe _ sportwagenvermietung.png">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <style>
+    :root {
+      --bg: #111;
+      --text: #eee;
+      --accent: #e30613;
+      --accent-dark: #a8000e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding-top: 120px;
+      text-align: center;
+    }
+
+    .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+
+    header { position: fixed; top:0; left:0; width:100%; background: var(--bg); border-bottom:1px solid #222; z-index: 1000; }
+
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .mobile-menu-btn .bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+  }
+
+  .nav-menu {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0;
+    border-top: 1px solid #222;
+  }
+
+  .nav-menu.open {
+    max-height: 300px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #222;
+  }
+
+  .nav-menu a:hover {
+    background: #1a1a1a;
+    color: var(--accent);
+  }
+
+  .logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-right: auto;
+    text-align: left;
+    text-decoration: none;
+  }
+  .nav-menu a.active {
+    color: var(--text); /* nicht rot in Mobile */
+  }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+
+    .fleet-section {
+      padding: 0.5rem 0;
+    }
+
+    .fleet-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 3px;
+      color: var(--accent);
+    }
+
+    .swiper-container {
+      overflow: hidden;
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      position: relative;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      cursor: zoom-in;
+      transition: transform 0.4s ease;
+    }
+
+    .swiper-slide img:hover {
+      transform: scale(1.02);
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3rem;
+      color: var(--accent);
+      cursor: pointer;
+      z-index: 10;
+      user-select: none;
+    }
+
+    .prev-arrow { left: -50px; }
+    .next-arrow { right: -50px; }
+
+    .swiper-pagination {
+      margin-top: 1rem;
+    }
+
+    .swiper-pagination-bullet {
+      background: rgba(255, 255, 255, 0.5);
+      width: 10px;
+      height: 10px;
+      margin: 0 6px !important;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--accent);
+    }
+
+.car-details,
+.price-list {
+  background: rgba(18, 18, 18, 0.9);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+.car-details h2,
+.price-list h2 {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.car-details ul,
+.price-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.car-details li,
+.price-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.car-details li::before,
+.price-list li::before {
+  content: "•";
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+}
+
+.car-details li strong,
+.price-list li strong {
+  font-weight: bold;
+}
+
+.price-list p {
+  margin: 1.5rem 0 0.75rem;
+  font-weight: bold;
+}
+
+
+    .booking-section {
+      margin-top: 2rem;
+    }
+
+    .booking-btn {
+      background: var(--accent);
+      color: #fff;
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .booking-btn:hover {
+      background: var(--accent-dark);
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
+    }
+
+    footer {
+      padding: 2rem 0;
+      background: var(--bg);
+      border-top: 1px solid #222;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .footer-links a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .mobile-menu-btn .bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0;
+    border-top: 1px solid #222;
+  }
+
+  .nav-menu.open {
+    max-height: 300px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #222;
+  }
+
+  .nav-menu a:hover {
+    background: #1a1a1a;
+    color: var(--accent);
+  }
+
+  .logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-right: auto;
+    text-align: left;
+    text-decoration: none;
+  }
+  .nav-menu a.active {
+    color: var(--text); /* nicht rot in Mobile */
+  }
+}
+  </style>
+
+</head>
+<body>
+
+<header>
+  <nav class="navbar container">
+    <div class="logo">OE‑Sportwagenvermietung</div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="flotte.html">Fahrzeug</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="fleet-section container">
+  <h1>Mercedes‑AMG CLA 45 S</h1>
+
+  <div class="swiper-container">
+    <div class="arrow prev-arrow">&#10094;</div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="img/cla_cover_bild.jpg" class="zoomable" alt="Frontansicht">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/cla_bild_lichter.JPG" class="zoomable" alt="Interieur">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/cla_bild_von_hinten.JPG" class="zoomable" alt="Rückansicht">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/cla_interior.jpg" class="zoomable" alt="Interieur">
+      </div>
+    </div>
+    <div class="arrow next-arrow">&#10095;</div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- ✨ Fahrzeugdetails -->
+  <div class="car-details">
+    <h2>Fahrzeugdetails</h2>
+    <ul>
+      <li><strong>Modell:</strong> Mercedes-AMG CLA 45 S</li>
+      <li><strong>Leistung:</strong> 421 PS| 500 Nm Drehmoment </li>
+      <li><strong>Farbe:</strong> Graphitgrau Metallic</li>
+      <li><strong>Getriebe:</strong> AMG SPEEDSHIFT DCT 8G</li>
+      <li><strong>0–100 km/h:</strong> 4,0 Sekunden</li>
+      <li><strong>Antrieb:</strong> Allrad (4MATIC+)</li>
+    </ul>
+  </div>
+
+<div class="price-list">
+  <h2>Mietpreise & Extras</h2>
+  <ul>
+    <li><strong>Pro Tag (Mo–Do):</strong> 199 € inkl. 150 Freikilometer</li>
+    <li><strong>4 Std (Mo–Do):</strong> 99 € inkl. 80 Freikilometer</li>
+    <li><strong>4 Tage (Mo–Do):</strong> 599 € inkl. 500 Freikilometer</li>
+    <li><strong>Pro Tag (Fr–So):</strong> 249 € inkl. 150 Freikilometer</li>
+    <li><strong>Wochenende (Fr–So):</strong> 599 € inkl. 500 Freikilometer</li>
+    <li><strong>Wochenende (Fr–Mo):</strong> 699 € inkl. 650 Freikilometer</li>
+    <li><strong>1 Woche:</strong> 999 € inkl. 800 Freikilometer</li>
+  </ul>
+  <p><strong>Extra‑Kilometerpakete:</strong></p>
+
+  <ul>
+    <li><strong>100 km –</strong> 80,00 €</li>
+    <li><strong>300 km –</strong> 240,00 €</li>
+    <li><strong>500 km –</strong> 380,00 €</li>
+  </ul>
+</div>
+
+
+  <div class="booking-section">
+    <a href="kontakt.html" class="booking-btn">Jetzt Kontakt aufnehmen</a>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Zoom Ansicht">
+</div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 OE‑Sportwagenvermietung</p>
+      <ul class="footer-links">
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="agb.html">AGB</a></li>
+      </ul>
+    </div>
+  </footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+
+  <script>
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.querySelector('.nav-menu');
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

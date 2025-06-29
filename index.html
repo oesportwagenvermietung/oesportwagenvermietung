@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OE‑Sportwagenvermietung | Mercedes‑AMG CLA 45 S</title>
+  <meta name="description" content="Luxuriöse Sportwagenmiete – Mercedes-AMG CLA 45 S" />
+  <link rel="icon" href="img/oe _ sportwagenvermietung.png" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+    :root {
+      --bg: #111;
+      --text: #eee;
+      --accent: #e30613;
+      --accent-dark: #a8000e;
+      --form-bg: #1b1b1b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+  .container { max-width: 1100px; margin: auto; padding: 20px; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding-top: 80px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    header { position: fixed; top:0; left:0; width:100%; background: var(--bg); border-bottom:1px solid #222; z-index: 1000; }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-menu a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--accent);
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .mobile-menu-btn .bar {
+      width: 24px;
+      height: 3px;
+      background: var(--text);
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background: url('img/oe_sportwagenvermietung.JPG') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .close-hero {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-card {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 4rem 5rem;
+      max-width: 900px;
+      background: rgba(18, 18, 18, 0.55);
+      border-radius: 20px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        0 20px 60px rgba(255, 0, 0, 0.15),
+        0 0 80px rgba(255, 0, 0, 0.1);
+      animation: fadeInLuxury 2s ease-out;
+      transition: box-shadow 0.4s ease, transform 0.4s ease;
+    }
+
+    .hero-card h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-card p {
+      font-size: 1.25rem;
+      margin-bottom: 2.2rem;
+      color: #e0e0e0;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: var(--accent-dark);
+    }
+
+    .vehicle-highlight {
+      padding: 4rem 0;
+    }
+
+    .vehicle-highlight .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .vehicle-info h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .vehicle-info p {
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .cta-button.small {
+      font-size: 0.95rem;
+      padding: 0.7rem 1.8rem;
+      margin-top: 1rem;
+    }
+
+    footer {
+      padding: 2rem 0;
+      background: var(--bg);
+      border-top: 1px solid #222;
+      text-align: center;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .footer-links a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @keyframes fadeInLuxury {
+      0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+      }
+      60% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+  @media screen and (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }}
+  .nav-menu.open {
+    max-height: 300px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #222;
+  }
+
+  .nav-menu a:hover {
+    background: #1a1a1a;
+    color: var(--accent);
+  }
+
+  .logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-right: auto;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .hero {
+    height: 60vh; /* vorher: 100vh */
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+    align-items: flex-start; /* statt center */
+    margin-bottom: 1rem;
+    background-size: 100%;
+  }
+
+  .hero-card {
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .hero-card h1 {
+  font-size: 2.8rem; /* z. B. statt 3.2rem */
+}
+
+.hero-card p {
+  font-size: 1.1rem; /* z. B. statt 1.25rem */
+}
+
+  .nav-menu {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0;
+    border-top: 1px solid #222;
+  }
+
+  .nav-menu.open {
+    max-height: 300px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu a.active {
+  color: var(--text); /* nicht rot in Mobile */
+  }
+
+  </style>
+
+</head>
+  <header>
+    <nav class="navbar container">
+      <div class="logo">OE‑Sportwagenvermietung</div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="flotte.html">Fahrzeug</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <button class="close-hero" aria-label="Hero schließen">×</button>
+      <h1>Mercedes‑AMG CLA 45 S</h1>
+      <p>Erleben Sie Performance, Premium‑Design und pure Emotion.</p>
+      <a href="kontakt.html" class="cta-button">Jetzt anfragen</a>
+    </div>
+  </section>
+
+  <section class="vehicle-highlight">
+    <div class="container">
+      <img src="img/cla_von_vorne.jpg" alt="Mercedes‑AMG CLA 45 S Frontansicht" />
+      <div class="vehicle-info">
+        <h2>Fahrzeugdaten</h2>
+        <p><strong>Modell:</strong> Mercedes‑AMG CLA 45 S</p>
+        <p><strong>Leistung:</strong> 421 PS – 0 auf 100 km/h in 4 Sek.</p>
+        <p><strong>Farbe:</strong> Schwarz & Weiß, high-gloss finish</p>
+        <p><strong>Antrieb:</strong> 4MATIC+ Allradantrieb für maximale Kontrolle</p>
+        <p><strong>Preis:</strong> ab 99 €</p>
+        <a href="flotte.html" class="cta-button small">Mehr erfahren</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 OE‑Sportwagenvermietung</p>
+      <ul class="footer-links">
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="agb.html">AGB</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.querySelector('.nav-menu');
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const closeBtn = document.querySelector(".close-hero");
+    const popupCard = document.querySelector(".hero-card");
+
+    if (closeBtn && popupCard) {
+      closeBtn.addEventListener("click", function () {
+        popupCard.style.display = "none"; // ✅ Nur das Pop-up verschwindet
+      });
+    }
+  });
+</script>
+</body>
+</html>
